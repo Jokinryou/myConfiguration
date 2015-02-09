@@ -95,7 +95,7 @@ set showcmd
 syntax on
 
 " 配色方案
-colorscheme ir_black
+colorscheme desert
 set t_Co=256
 
 if has("gui_running")
