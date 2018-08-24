@@ -48,3 +48,7 @@ source $ZSH/oh-my-zsh.sh
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+
+alias ggpullrb='git pull --rebase origin $(git_current_branch)'
+alias ggr='git review $(git_current_branch)'
+alias ggbr='git branch'
