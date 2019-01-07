@@ -49,6 +49,11 @@ export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+export PATH="$PATH:/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Support"
+
 alias ggpullrb='git pull --rebase origin $(git_current_branch)'
 alias ggr='git review $(git_current_branch)'
 alias ggbr='git branch'
+alias ggam='gc --amend'
+alias ggcho='git checkout'
+alias podi='pod install'
