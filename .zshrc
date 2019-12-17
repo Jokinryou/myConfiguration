@@ -45,11 +45,12 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH="$PATH:/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Support"
+export PATH="/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/Frameworks/ITunesSoftwareService.framework/Support:$PATH"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 alias ggpullrb='git pull --rebase origin $(git_current_branch)'
 alias ggr='git review $(git_current_branch)'
@@ -57,3 +58,12 @@ alias ggbr='git branch'
 alias ggam='gc --amend'
 alias ggcho='git checkout'
 alias podi='pod install'
+alias xcode='open -a /Applications/Xcode.app'
+alias acode='open -a /Applications/AppCode.app'
+alias oo='open .'
+
+export GEM_HOME=$HOME/.gem
+export PATH=$GEM_HOME/bin:$PATH
+
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"

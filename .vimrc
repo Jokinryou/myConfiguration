@@ -177,36 +177,6 @@ let g:EasyMotion_leader_key = '<leader><Leader>'
 " 自动识别文件编码
 " Bundle 'FencView.vim'
 
-" 在VIM的编辑窗口树状显示文件目录
-Bundle 'The-NERD-tree'
-" 设置相对行号
-" 映射快捷键为[,nt]
-nmap <leader>nt :NERDTree<cr>:set rnu<cr>
-" 默认显示书签列表
-let NERDTtreeShowBookmarks=1
-" 默认显示文件
-let NERDTreeShowFiles=1
-" 默认显示隐藏文件
-let NERDTreeShowHidden=1
-" 默认无视的文件类型
-let NERDTreeIgnore=['\.$','\~$']
-" 默认显示行号
-let NERDTreeShowLineNumbers=1
-" 窗口位置['left' or 'right']，1显示在右侧
-let NERDTreeWinPos=1
-" 让Tree把自己给装饰的更漂亮
-let NERDChristmasTree=1
-" 控制当光标的移动超过一定距离时，是否自动将焦点调整到屏中心
-let NERDTreeAutoCenter=1
-" 使用老式的目录层叠指示
-let NERDTreeDirArrows=0
-
-" open a NERDTree automatically when vim starts up if no files were specified
-autocmd vimenter * if !argc() | NERDTree | endif
-
-" close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
 " NERD出品的快速给代码加注释插件，选中，`ctrl+h`即可注释多种语言代码
 Bundle 'The-NERD-Commenter'
 let NERDShutUp=1
