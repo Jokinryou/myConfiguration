@@ -53,17 +53,31 @@ export PATH="/Applications/Xcode.app/Contents/Applications/Application Loader.ap
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 
 alias ggpullrb='git pull --rebase origin $(git_current_branch)'
-alias ggr='git review $(git_current_branch)'
+alias ggr='git review'
 alias ggbr='git branch'
 alias ggam='gc --amend'
 alias ggcho='git checkout'
+alias ggcp='git cherry-pick'
 alias podi='pod install'
 alias xcode='open -a /Applications/Xcode.app'
 alias acode='open -a /Applications/AppCode.app'
 alias oo='open .'
+alias cat='bat --paging=never'
+
+alias tree="find . -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'"
 
 export GEM_HOME=$HOME/.gem
 export PATH=$GEM_HOME/bin:$PATH
 
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export LDFLAGS="-L/usr/local/opt/ruby@2.6/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby@2.6/include"
+export PATH=~/.npm-global/bin:$PATH
+export PATH="$PATH:./node_modules/.bin"
+
+#alias for cnpm
+alias cnpm="npm --registry=https://registry.npm.taobao.org \
+  --cache=$HOME/.npm/.cache/cnpm \
+  --disturl=https://npm.taobao.org/dist \
+  --userconfig=$HOME/.cnpmrc"
+
+export PATH="/usr/local/opt/ruby@2.6/bin:$PATH"
